@@ -85,7 +85,7 @@ module Mautic
     # ==--==--==--==--
 
     def authorize
-      redirect_to @mautic_connection.authorize(self)
+      redirect_to @mautic_connection.authorize(self), allow_other_host: true
     end
 
     def oauth2
