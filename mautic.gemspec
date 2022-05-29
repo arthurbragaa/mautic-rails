@@ -27,8 +27,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'ostruct', '~> 0.5.3'
   s.add_dependency 'rest-client', '~> 2.0'
 
-  s.add_development_dependency 'database_cleaner', '~> 1.7'
-  s.add_development_dependency 'factory_bot_rails', '~> 5.1'
+  s.add_development_dependency 'database_cleaner', '~> 2.0'
+  s.add_development_dependency 'factory_bot_rails', '~> 6.2'
   s.add_development_dependency 'faker', '~> 2.7'
   s.add_development_dependency 'pry-rails', '~> 0.3'
   s.add_development_dependency 'rspec-rails', '~> 5.1'
