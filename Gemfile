@@ -16,5 +16,5 @@ gem 'simplecov', require: false, group: :test
 gem "net-smtp", "~> 0.3.1", group: :test
 # gem "rails", "4.2.8"
 gem "rails", "~> 7"
-
 gem "sprockets-rails", "~> 3.4"
+

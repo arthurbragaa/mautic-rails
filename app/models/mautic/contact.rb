@@ -139,6 +139,23 @@ module Mautic
 
     # !endgroup
 
+    # @!group Segments
+
+    # @return [Array<Mautic::Segment>]
+    def segments
+      return @segments if @segments
+
+      json = @connection.request(:get, "api/contacts/#{id}/segments")
+
+      @segments = json["segments"].collect do |_segment_id, segment_attributes|
+        Mautic::Segment.new @connection, segment_attributes
+      end
+    rescue RequestError => _e
+      []
+    end
+
+    # !endgroup
+
     # @!group Stage
 
     # @return [Mautic::Stage, nil]

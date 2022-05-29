@@ -39,6 +39,10 @@ module Mautic
       end
     end
 
+    def segments
+      Proxy.new(self, 'segments', data_name: "lists")
+    end
+
     def contacts
       Proxy.new(self, 'contacts', default_params: { search: '!is:anonymous' })
     end
